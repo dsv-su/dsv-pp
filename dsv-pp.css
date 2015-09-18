@@ -156,7 +156,7 @@ form br {
 .course_units_table td.timetable { text-align: center }
 
 .course_units_table col.cut_timetable { width: 60px; }
-.course_units_table col.cut_p { width: 40px; }
+.course_units_table col.cut_p { width: 50px; }
 .course_units_table col.cut_time { width: 90px; }
 .course_units_table col.cut_bet { width: 120px; }
 
