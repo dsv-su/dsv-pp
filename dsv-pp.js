@@ -65,20 +65,18 @@ $(function () {
         var action = null;
         var query = {lang: lang};
         var base_uri = APP_URI;
+        var footable = false;
 
         switch (func) {
         case 'dsv_staff':
         case 'dsv_staff_new':
             action = 'staff.php';
+            footable = true;
             break;
         case 'all_course_units':
         case 'course_segments':
             action = 'course_segments.php';
-            if (!window.footable) {
-                $('<link rel="stylesheet" type="text/css" href="' + base_uri
-                  + 'css/course_segments.css" />').appendTo('head');
-                $.getScript(base_uri + 'js/course_segments.js');
-            }
+            footable = true;
             break;
         case 'search_publications':
             action = 'publications.php';
@@ -88,6 +86,12 @@ $(function () {
             query.included = 1;
             query.researchArea = args.area.split(',');
             break;
+        }
+
+        if (footable && !window.footable) {
+            $('<link rel="stylesheet" type="text/css" href="' + base_uri
+              + 'css/footable.css" />').appendTo('head');
+            $.getScript(base_uri + 'js/footable.js');
         }
 
         if (extra_query) $.extend(query, extra_query);
