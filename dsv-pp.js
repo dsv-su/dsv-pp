@@ -74,6 +74,9 @@ $(function () {
         case 'all_course_units':
         case 'course_segments':
             action = 'course_segments.php';
+            $('<link rel="stylesheet" type="text/css" href="' + base_uri
+              + 'css/course_segments.css" />').appendTo('head');
+            $.getScript(base_uri + 'js/course_segments.js');
             break;
         case 'search_publications':
             action = 'publications.php';
