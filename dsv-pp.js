@@ -11,7 +11,7 @@ $(function () {
         '/anstalld/anstalldinfo.jspa':                [500, 250],
         '/servlet/schema.moment.Momentschema':        [500, 500],
         '/servlet/student.Studentinfo':               [400, 300],
-        '/publikation/publikationInfo.jspa': [500, 500]
+        '/publikation/publikationInfo.jspa':          [500, 500]
     };
     var THROBBER_URI = 'https://www2.dsv.su.se/images/throbber.gif';
     var lang = $('html').attr('lang');
