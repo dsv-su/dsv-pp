@@ -89,7 +89,7 @@ $(document).ready(function () {
         }
 
         if (footable && !window.footable) {
-            $('<link rel="stylesheet" type="text/css" href="' + base_uri
+            $('<link rel="stylesheet" type="text/html" href="' + base_uri
               + 'css/footable.css" />').appendTo('head');
             $.getScript(base_uri + 'js/footable.js');
         }
@@ -97,7 +97,7 @@ $(document).ready(function () {
         if (extra_query) $.extend(query, extra_query);
 
         if (action) {
-            qs = $.param(query);
+            var qs = $.param(query);
             if (qs !== '') qs = '&' + qs;
 
             $(element).addClass('dsv-macro-loading');
