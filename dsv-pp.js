@@ -2,7 +2,7 @@
  * Javascript for DSV's Polopoly instance
  */
 
-$(function () {
+$(document).ready(function () {
     var APP_URI = 'https://www2.dsv.su.se/daisyweb/';
     var DAISY_HOST = 'daisy.dsv.su.se';
     var DAISY_DIMS = {
